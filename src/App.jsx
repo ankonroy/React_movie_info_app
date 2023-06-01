@@ -47,11 +47,11 @@ function App() {
     const data = await Promise.all(promises);
     // console.log(data);
     data.map(({ genres }) => {
-      return genres.map((item) => allGenres[item.id] = item);
+      return genres.map((item) => (allGenres[item.id] = item));
     });
 
     // console.log(allGenres)
-    dispatch(getGenres(allGenres))
+    dispatch(getGenres(allGenres));
   };
 
   return (
